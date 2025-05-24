@@ -1,0 +1,14 @@
+# MiniMaths (version interactive)
+
+App pédagogique C++ pour NumWorks Omega, avec menu et affichage explicatif.
+
+## Installation
+1. Copier ce dossier dans `apps/`.
+2. Ajouter `add_subdirectory(mini_maths)` dans `apps/CMakeLists.txt`.
+3. Dans `apps/apps_container.cpp` :
+```cpp
+extern App * miniMathsAppCreator(Container * container);
+apps[i++] = miniMathsAppCreator(this);
+```
+4. Compiler avec `make MODEL=n110`
+5. Flasher la calculatrice avec `firmware.bin`
