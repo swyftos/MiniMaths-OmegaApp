@@ -42,41 +42,6 @@ Upsilon/
 Place tout le dossier `mini_maths/` dans :
 ```
 Upsilon/apps/external/app/
-```
-
----
-
-### 2. Créer le `Makefile` de l’app
-
-Dans `apps/external/app/mini_maths/Makefile` :
-
-```make
-APP_OBJS += \
-  $(BUILD_DIR)/apps/external/app/mini_maths/src/main.o \
-  $(BUILD_DIR)/apps/external/app/mini_maths/src/controller.o \
-  $(BUILD_DIR)/apps/external/app/mini_maths/src/complex_page.o \
-  $(BUILD_DIR)/apps/external/app/mini_maths/src/derivation_page.o \
-  $(BUILD_DIR)/apps/external/app/mini_maths/src/maths_lib.o
-```
-
----
-
-### 3. Déclarer l’app dans `apps_container.cpp`
-
-Dans le fichier `Upsilon/apps/apps_container.cpp` :
-
-#### ➤ En haut du fichier, ajoute :
-
-```cpp
-extern App * miniMathsAppCreator(Container * container);
-```
-
-#### ➤ Dans la section d’ajout des apps, ajoute :
-
-```cpp
-apps[i++] = miniMathsAppCreator(this);
-```
-
 
 
 ### 🖥️ Pour tester sur simulateur Linux :
