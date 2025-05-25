@@ -1,6 +1,4 @@
--app_external_src += $(addprefix apps/external/app/,\
--    sample.c \
--)
-+app_external_src += $(addprefix apps/external/app/,\
-+    mini_maths/src/mini_maths.c \
-+)
+# Upsilon/apps/external/app/mini_maths/sources.mak
+app_external_src += $(addprefix apps/external/app/mini_maths/,\
+  src/maths_lib.c \
+)
