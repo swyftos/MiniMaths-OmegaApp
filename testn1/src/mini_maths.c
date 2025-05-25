@@ -8,21 +8,29 @@ void extapp_msleep(int ms) { }
 #include <extapp_api.h>
 #include <math.h>
 
-// — tes fonctions mathématiques —
+#include <extapp_api.h>
+#include <math.h>
 
-
-// Calcul du module d'un complexe
+// --- Début fusion maths_lib.c ---
 float sqrt_complex(float a, float b) {
   return sqrtf(a*a + b*b);
 }
-
-// Dérivée approchée de f(x)=x^2+3x+1
 float derivative_of_fx(float x) {
   float h = 0.001f;
   float f1 = x*x + 3*x + 1;
   float f2 = (x+h)*(x+h) + 3*(x+h) + 1;
   return (f2 - f1) / h;
 }
+// --- Fin fusion ---
+
+void extapp_main(void) {
+  float module = sqrt_complex(3.0f, -2.0f);
+  float derivee = derivative_of_fx(2.0f);
+  extapp_clear();
+  extapp_drawPixel(10, 10, 1);
+  extapp_msleep(1000);
+}
+
 
 // Entrée de l'ext-app — c'est obligatoire !
 void extapp_main(void) {
