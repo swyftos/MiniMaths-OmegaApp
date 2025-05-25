@@ -1,14 +1,11 @@
 #ifndef DEVICE
 // Sur simulateur Linux, on stubbe l’API des ext-apps  
-#include <stdint.h>              // <— nécessaire pour uint32_t
+#include <stdint.h>              // pour uint32_t
 void extapp_clear(void) { }
 void extapp_drawPixel(int x, int y, int on) { }
-void extapp_msleep(uint32_t ms) { }  // <— signature EXACTE
+// Prototype exact de l’API extapp_api.h
+void extapp_msleep(uint32_t ms) { }
 #endif
-
-
-#include <extapp_api.h>
-#include <math.h>
 
 // --- Début fusion maths_lib.c ---
 float sqrt_complex(float a, float b) {
