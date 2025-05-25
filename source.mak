@@ -1,5 +1,6 @@
- app_external_src += $(addprefix apps/external/app/,\
+-app_external_src += $(addprefix apps/external/app/,\
 -    sample.c \
-+    sample.c \
+-)
++app_external_src += $(addprefix apps/external/app/,\
 +    mini_maths/src/mini_maths.c \
- )
++)
