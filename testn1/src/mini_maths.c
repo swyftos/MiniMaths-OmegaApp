@@ -1,5 +1,14 @@
+#ifndef DEVICE
+// sur simulateur Linux, on stubbe extapp_API  
+void extapp_clear(void) { }
+void extapp_drawPixel(int x, int y, int on) { }
+void extapp_msleep(int ms) { }
+#endif
+
 #include <extapp_api.h>
 #include <math.h>
+// … le reste de mini_maths.c …
+
 
 // Calcul du module d'un complexe
 float sqrt_complex(float a, float b) {
