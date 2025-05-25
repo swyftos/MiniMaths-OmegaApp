@@ -1,5 +1,5 @@
 #ifndef DEVICE
-// sur simulateur Linux, on stubbe extapp_API  
+// Sur simulateur Linux, on stubbe l’API des ext-apps  
 void extapp_clear(void) { }
 void extapp_drawPixel(int x, int y, int on) { }
 void extapp_msleep(int ms) { }
@@ -7,7 +7,13 @@ void extapp_msleep(int ms) { }
 
 #include <extapp_api.h>
 #include <math.h>
-// … le reste de mini_maths.c …
+
+// — tes fonctions mathématiques —
+
+void extapp_main(void) {
+  // ton code de démo
+}
+
 
 
 // Calcul du module d'un complexe
