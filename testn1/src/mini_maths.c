@@ -1,11 +1,11 @@
 #ifndef DEVICE
 // Sur simulateur Linux, on stubbe l’API des ext-apps  
-#include <stdint.h>               // pour uint32_t
+#include <stdint.h>              // <— nécessaire pour uint32_t
 void extapp_clear(void) { }
 void extapp_drawPixel(int x, int y, int on) { }
-// Prototype officiel : void extapp_msleep(uint32_t ms);
-void extapp_msleep(uint32_t ms) { }
+void extapp_msleep(uint32_t ms) { }  // <— signature EXACTE
 #endif
+
 
 #include <extapp_api.h>
 #include <math.h>
