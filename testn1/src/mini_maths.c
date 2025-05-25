@@ -20,14 +20,13 @@ float derivative_of_fx(float x) {
 }
 // --- Fin fusion ---
 
-// Point d'entrée unique de l'ext-app
 void extapp_main(void) {
   float module = sqrt_complex(3.0f, -2.0f);
   float derivee = derivative_of_fx(2.0f);
+  (void)module;   // évite le warning « unused-variable »
+  (void)derivee;  // idem
 
   extapp_clear();
-  // Affiche un pixel pour indiquer que l'app tourne
   extapp_drawPixel(10, 10, 1);
-  // Garde l'affichage 3 secondes
   extapp_msleep(3000);
 }
