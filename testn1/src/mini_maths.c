@@ -1,11 +1,5 @@
-#ifndef DEVICE
-// Sur simulateur Linux, on stubbe l’API des ext-apps  
-#include <stdint.h>              // pour uint32_t
-void extapp_clear(void) { }
-void extapp_drawPixel(int x, int y, int on) { }
-// Prototype exact de l’API extapp_api.h
-void extapp_msleep(uint32_t ms) { }
-#endif
+#include <extapp_api.h>
+#include <math.h>
 
 // --- Début fusion maths_lib.c ---
 float sqrt_complex(float a, float b) {
@@ -22,10 +16,11 @@ float derivative_of_fx(float x) {
 void extapp_main(void) {
   float module = sqrt_complex(3.0f, -2.0f);
   float derivee = derivative_of_fx(2.0f);
-  (void)module;   // évite le warning « unused-variable »
+  (void)module;   // silence unused-variable
   (void)derivee;  // idem
 
   extapp_clear();
   extapp_drawPixel(10, 10, 1);
   extapp_msleep(3000);
 }
+
