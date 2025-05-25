@@ -10,11 +10,6 @@ void extapp_msleep(int ms) { }
 
 // — tes fonctions mathématiques —
 
-void extapp_main(void) {
-  // ton code de démo
-}
-
-
 
 // Calcul du module d'un complexe
 float sqrt_complex(float a, float b) {
